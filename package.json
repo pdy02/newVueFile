@@ -1,6 +1,6 @@
 {
-  "name": "newvuefile",
-  "displayName": "newVueFile",
+  "name": "dy-newvuefile",
+  "displayName": "dy-newVueFile",
   "description": "创建一个新的.vue文件",
   "version": "0.0.1",
   "publisher": "Dy02",
