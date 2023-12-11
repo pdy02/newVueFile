@@ -1,0 +1,83 @@
+{
+  "name": "newvuefile",
+  "displayName": "newVueFile",
+  "description": "创建一个新的.vue文件",
+  "version": "0.0.1",
+  "publisher": "Dy02",
+  "keywords": [
+    "vue",
+    "createFile",
+    "autoAddSuffix"
+  ],
+  "engines": {
+    "vscode": "1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "newvuefile.createVueFile",
+        "title": "新建.vue文件"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "newvuefile.createVueFile",
+          "group": "navigation@50"
+        }
+      ]
+    },
+    "configuration":{
+      "title": "newvuefile",
+      "properties": {
+        "newvuefile.default.template":{
+          "type":"array",
+          "default":[
+            "<template>",
+            "\t<div>",
+            "\t",
+            "\t</div>",
+            "</template>",
+            "\t",
+            "<script setup lang=\"ts\">",
+            "\t",
+            "</script>",
+            "\t",
+            "<style scoped lang=\"scss\">",
+            "</style>"
+          ],
+          "description": "默认模板"
+        },
+        "newvuefile.customTemplate":{
+          "type":"array",
+          "description": "自定义模版对象数组. 定义模版名称和模版内容. 使用时在文件名&自定义模版名称,即可使用对于自定义模版.name字段配置模版名称, template字段配置模版内容"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "typescript": "^5.3.2",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  }
+}
