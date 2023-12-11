@@ -4,16 +4,16 @@ Learning for beginners
 新建时可以直接使用vue模版
 
 # 项目结构
-src
-├── extension.ts // 入口文件
-├── template
-│   ├── index.ts // 模版处理文件
-├── utils
-│   ├── index.ts // 工具函数库
-├── constants
-│   ├── index.ts // 常量定义
-├── commands
-│   ├── index.ts // 命令定义
+src<br>
+├── extension.ts // 入口文件<br>
+├── template<br>
+│   ├── index.ts // 模版处理文件<br>
+├── utils<br>
+│   ├── index.ts // 工具函数库<br>
+├── constants<br>
+│   ├── index.ts // 常量定义<br>
+├── commands<br>
+│   ├── index.ts // 命令定义<br>
 
 # 使用
 在资源管理器中右键文件夹，选择`新建.vue文件`，输入文件名, 即可快速生成vue文件.自动添加.vue后缀.
