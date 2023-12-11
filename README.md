@@ -1,6 +1,9 @@
+# newVueFile
+vscode插件名字: dy-newVueFiel
+
 # 项目介绍
-Learning for beginners
-一款可以在文件夹右键**新建.vue后缀文件**的vscode插件.
+Learning for beginners  
+一款可以在文件夹右键**新建.vue后缀文件**的vscode插件.  
 新建时可以直接使用vue模版
 
 # 项目结构
