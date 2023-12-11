@@ -4,6 +4,11 @@
   "description": "创建一个新的.vue文件",
   "version": "0.0.1",
   "publisher": "Dy02",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pdy02/newVueFile.git",
+    "directory": "src"
+  },
   "keywords": [
     "vue",
     "createFile",
