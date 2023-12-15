@@ -1,19 +1,19 @@
 
 /**
  * @description: 验证规则, 验证用户输入的值是否符合规则
- * @param {string | undefined} val : 用户输入的value值 
- * @returns { boolean }
+ * @param {string} val : 用户输入的value值 
  */
-export const ruleValue = (val: string) => {
-    // if (!val) {
-    //     return false;
+export const ruleValue = (val: string | undefined) => {
+    // if (val.includes('&')) {
+    //     return true;
     // }
-    // 只有一个&, 就是默认模版(v3_ts_sass)
-    // if (val.split('').at(-1) === '&') {
-    if (val.includes('&')) {
-        return true;
-    }
-    return false;
+    // return false;
+    if(!val) {
+        return false;
+    };
+    const v = val.trim().split('&')[0];
+
+    return !!(val?.trim() || v);
 };
 
 
@@ -47,6 +47,9 @@ export const getValueParam = (value: string) => {
  */
 export const concatTemplate = (templateArray: string[]) => {
     let tmp = '';
+    if(templateArray.length === 0) {
+        return tmp;
+    };
     for (const item of templateArray) {
         tmp += item + '\r\n';
     }
