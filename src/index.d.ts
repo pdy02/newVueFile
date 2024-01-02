@@ -11,6 +11,9 @@ declare type TUserConfig = {
         name: string
         template: string[]
     }[]
+    createOtherFile:{
+        exts: string[]
+    }
 };
 
 

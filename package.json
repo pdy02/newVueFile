@@ -2,7 +2,7 @@
   "name": "dy-newvuefile",
   "displayName": "dy-newVueFile",
   "description": "创建一个新的.vue文件",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "Dy02",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "autoAddSuffix"
   ],
   "engines": {
-    "vscode": "1.85.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
@@ -27,6 +27,10 @@
       {
         "command": "newvuefile.createVueFile",
         "title": "新建.vue文件"
+      },
+      {
+        "command": "newvuefile.createFile",
+        "title": "新建其他文件"
       }
     ],
     "menus": {
@@ -34,6 +38,11 @@
         {
           "when": "explorerResourceIsFolder",
           "command": "newvuefile.createVueFile",
+          "group": "navigation"
+        },
+        {
+          "when": "explorerResourceIsFolder",
+          "command": "newvuefile.createFile",
           "group": "navigation"
         }
       ]
@@ -72,6 +81,16 @@
         "newvuefile.customTemplate":{
           "type":"array",
           "description": "自定义模版对象数组. 定义模版名称和模版内容. 使用时在文件名&自定义模版名称,即可使用对于自定义模版.name字段配置模版名称, template字段配置模版内容"
+        },
+        "newvuefile.createOtherFile.exts":{
+          "type":"array",
+          "description": "创建其他文件的后缀数组. 例如: ['js', 'ts', 'vue', 'jsx', 'tsx']",
+          "default":[
+            "js",
+            "ts",
+            "css",
+            "html"
+          ]
         }
       }
     }

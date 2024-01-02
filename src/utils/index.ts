@@ -1,4 +1,5 @@
 
+// export const createOneFile = createOneFile;
 /**
  * @description: 验证规则, 验证用户输入的值是否符合规则
  * @param {string} val : 用户输入的value值 
@@ -55,3 +56,5 @@ export const concatTemplate = (templateArray: string[]) => {
     }
     return tmp;
 };
+
+
